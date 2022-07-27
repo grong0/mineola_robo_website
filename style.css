@@ -1,0 +1,285 @@
+html, body{ margin:0; padding:0; height:100%; width:100%; }
+
+.container{
+    width: 100%;
+    height: 100vh;
+
+    /* Centering CSS */
+    position: relative;
+    text-align: center;
+    background-color: red;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+.wrapper::-webkit-scrollbar, body::-webkit-scrollbar { display: none; } /* Chrome, Safari, Opera(Newer versions) */
+.wrapper { overflow: -moz-scrollbars-none; } /* Firefox */
+.wrapper { -ms-overflow-style: none; } /* Internet Explorer 10+ / Edge */
+
+
+
+@keyframes closeIn {
+    0%{
+        height: 100%;
+        width: 100%;
+        margin-top: 0px;
+        border-radius: 0px;
+    }
+    25%{
+        height: 100%;
+        width: 100%;
+        margin-top: 0px;
+        border-radius: 0px;
+    }
+    100%{
+        height: 90%;
+        width: 97%;
+        margin-top: 69px;
+        border-radius: 20px;
+    }
+}
+
+#welcome{
+    font-family: 'Alfa Slab One', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 90%;
+    width: 97%;
+    margin-top: 69px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    animation-name: closeIn;
+    animation-duration: 3s;
+}
+
+#welcome_imgs{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#welcome_imgs img{
+    /* width: 100%; */
+    position: absolute;
+    background: black;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+@keyframes comeup {
+    from{transform: translateY(210px);}
+}
+
+
+
+@keyframes fadein{
+    from{opacity: 0;}
+    to{opacity: 100;}
+}
+@keyframes fadeout{
+    from{opacity: 100;}
+    to{opacity: 0;}
+}
+
+.fadingin{
+    animation-name: fadein;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+.fadingout{
+    animation-name: fadeout;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+#img1{
+    top: -75%;
+    opacity: 100;
+}
+#img2{
+    top: -10%;
+    opacity: 0;
+}
+#img3{
+    top: -30%;
+    opacity: 0;
+}
+#img4{
+    top: -20%;
+    opacity: 0;
+}
+#img5{
+    top: -25%;
+    opacity: 0;
+}
+#img6{
+    top: -35%;
+    opacity: 0;
+}
+#img7{
+    top: -40%;
+    opacity: 0;
+}
+
+
+.centered{
+    margin: 0px;
+    padding: 0px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: grid;
+    float: left;
+    background-color: rgba(255, 0, 0, 0.5);
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+
+
+.text_container{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+    margin: 0;
+    float: left;
+    width: min-content;
+    height: 100%;
+    text-align: left;
+
+    overflow: hidden;
+}
+
+/* .combiner{
+    width: 0px;
+    height: min-content;
+    margin: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    align-content: center;
+} */
+
+@keyframes reveal_text{
+    0%{
+        width: 8px;
+        padding-left: 8px;
+    }
+    33.3%{
+        width: 8px;
+        padding-left: 8px;
+    }
+    33.4%{
+        width: 8px;
+        padding-left: 0px;
+    }
+    66.6%{
+        width: 100%;
+        padding-left: 0px;
+    }
+    100%{
+        width: 100%;
+        padding-left: 0px;
+    }
+}
+@keyframes reveal_after{
+    0%{
+        height: 0%;
+        top: 50%;
+    }
+    33.3%{
+        height: 100%;
+        top: 0%;
+    }
+    66.6%{
+        height: 100%;
+        top: 0%;
+    }
+    100%{
+        height: 0%;
+        top: 50%;
+    }
+}
+
+@keyframes image_fadeIn {
+    from{
+        opacity: 30%;
+        transform: scale(0%) rotate(45deg);
+    }
+    to{
+        opacity: 100%;
+        transform: scale(100%) rotate(0deg);
+    }
+}
+
+#mineola_robotics{
+    font-size: 150px;
+    margin: 0;
+    width: 0%;
+
+    overflow: hidden;
+
+    /* YOINKED */
+    position: relative;
+    /* END OF YOINKED */
+
+    animation-name: reveal_text;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+#mineola_robotics::after{
+    /* YOINKED */
+    content: '';
+    height: 0%; /* You can change this if you want smaller/bigger borders */
+    width: 8px;
+
+    position: absolute;
+    right: 0;
+    top: 50%;/* If you want to set a smaller height and center it, change this value */
+
+    background-color: #000000; /* The color of your border */
+    /* END OF YOINKED */
+
+    animation-name: reveal_after;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+.img_container{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* background-color: rgba(255, 255, 0, 0.5); */
+    width: max-content;
+}
+
+.centered img{
+    height: 400px;
+    opacity: 30%;
+    transform: scale(0%);
+
+    animation-name: image_fadeIn;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
