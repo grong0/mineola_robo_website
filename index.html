@@ -17,7 +17,11 @@
         <a href="index.html">Home</a>
         <a href="index.html">Home</a>
     </nav> -->
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
+        <nav>
+            <button id="menu" onclick="clicked()">MENU</button>
+            <img id="logo" src="mineola_robo_no-white.png">
+        </nav>
         <div id="welcome">
             <div id="welcome_imgs">
                 <img id="img1" src="/welcome_imgs/img1.png">
@@ -29,11 +33,13 @@
                 <img id="img7" src="/welcome_imgs/img7.png">
             </div>
             <div class="centered">
-                    <div class="text_container"><h1 id="mineola_robotics">MINEOLA ROBOTICS</h1></div>
-                    <div class="img_container"><img src="mineola_robo_no-white.png"></div>
+                    <div id="mineola_container"><div id="border_bottom"></div><h1 id="mineola">MINEOLA</h1></div>
+                    <div id="robotics_container"><h1 id="robotics">ROBOTICS</h1></div>
+                    <!-- <div class="img_container"><img src="mineola_robo_no-white.png"></div> -->
             </div>
         </div>
     </div>
     <script src="welcome_cycle.js"></script>
+    <script src="menuClick.js"></script>
 </body>
 </html>
