@@ -1,4 +1,4 @@
-html, body{ margin:0; padding:0; height:100%; background: black;}
+html, body{ margin:0; padding:0; height:100%; background: black; position: relative;}
 
 .container{
     width: 100%;
@@ -96,11 +96,13 @@ html, body{ margin:0; padding:0; height:100%; background: black;}
     animation-name: fadein;
     animation-duration: 3s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .fadingout{
     animation-name: fadeout;
     animation-duration: 3s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 #img1{
@@ -150,7 +152,7 @@ html, body{ margin:0; padding:0; height:100%; background: black;}
     float: left;
     background-color: rgba(255, 0, 0, 0.5);
     grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto 12px auto 1fr;
 }
 #mineola, #robotics{
     font-size: 150px;
@@ -169,26 +171,42 @@ html, body{ margin:0; padding:0; height:100%; background: black;}
     animation-name: comeDown;
     margin-top: -200px;
 }
+#mineola_container, #robotics_container{
+    display: inline-block;
+    height: 100%;
+    overflow-y: hidden;
+    width: auto;
+    height: 200px;
+}
 #mineola_container{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-
-    overflow-y: hidden;
-    width: auto;
-    position: relative;
 }
 #robotics_container{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.border{
+    background-color: black;
+    width: 0%;
+    height: 100%;
+    margin-left: 0%;
+
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
 
-    overflow-y: hidden;
-    width: auto;
+    animation: open-close 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
 }
-#border_bottom{
+/* #border_bottom{
     border-bottom: 12px solid black;
     border-radius: 8px;
     position: absolute;
@@ -201,23 +219,23 @@ html, body{ margin:0; padding:0; height:100%; background: black;}
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-delay: 3s;
-}
+} */
 @keyframes open-close{
     0%{
         width: 0%;
-        left: 50%;
+        margin-left: 50%;
     }
     33.3%{
         width: 100%;
-        left: 0%;
+        margin-left: 0%;
     }
     66.6%{
         width: 100%;
-        left: 0%;
+        margin-left: 0%;
     }
     100%{
         width: 0%;
-        left: 50%;
+        margin-left: 50%;
     }
 }
 @keyframes comeUp{
@@ -228,10 +246,10 @@ html, body{ margin:0; padding:0; height:100%; background: black;}
         margin-top: 200px
     }
     66.6%{
-        margin-top: 30px;
+        margin-top: 0px;
     }
     100%{
-        margin-top: 30px;
+        margin-top: 0px;
     }
 }
 @keyframes comeDown{
@@ -242,10 +260,10 @@ html, body{ margin:0; padding:0; height:100%; background: black;}
         margin-top: -200px;
     }
     66.6%{
-        margin-top: -30px;
+        margin-top: 0px;
     }
     100%{
-        margin-top: -30px;
+        margin-top: 0px;
     }
 }
 
@@ -254,15 +272,59 @@ html, body{ margin:0; padding:0; height:100%; background: black;}
 
 
 /* NAV ISH BAR ON TOP */
-#menu{
+.topnav{
+    position: absolute;
+    overflow: hidden;
+    background-color: grey;
+    height: 50px;
+}
+.topnav button{
+    float: left;
+    color: purple;
+    text-align: center;
+    text-decoration: none;
+}
+.topnav button:hover{
+    background-color: black;
+    color: white;
+}
+/* .topnav a:active{
+    background-color: green;
+    color: blue;
+} */
+.topnav-centered img{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 95%;
+}
+.topnav-right{
+    float: left;
+}
+#menu_button{
     position: absolute;
     padding: 12px;
 }
+#logo{
+    width: 60px;
+    /* opacity: 0;
+
+    animation-name: fadeIn;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 3s; */
+}
+
+
+
 @keyframes comeBack{
     from{
-        left: 30%;
+        left: 22%;
         height: 90%;
-        top: 5%;
+        top: 8%;
         border-radius: 20px;
     }
     to{
@@ -280,9 +342,9 @@ html, body{ margin:0; padding:0; height:100%; background: black;}
         border-radius: 0px;
     }
     to{
-        left: 30%;
+        left: 22%;
         height: 90%;
-        top: 5%;
+        top: 8%;
         border-radius: 20px;
     }
 }
@@ -298,20 +360,16 @@ html, body{ margin:0; padding:0; height:100%; background: black;}
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-#logo{
-    position: absolute;
-    left: 50%;
-    width: 60px;
-    top: 5px;
-    opacity: 0;
-
-    animation-name: fadeIn;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-duration: 3s;
-}
 @keyframes fadeIn{
     from{opacity: 0;}
     to{opacity: 1;}
+}
+
+
+
+
+/* MENU_NAV */
+#menu_nav{
+    position: absolute;
+    float: left;
 }

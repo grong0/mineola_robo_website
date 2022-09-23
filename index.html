@@ -11,18 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- <nav>
-        <a href="index.html">Home</a>
-        <a href="index.html">About</a>
-        <a href="index.html">Home</a>
-        <a href="index.html">Home</a>
-    </nav> -->
+    <nav id="menu_nav">
+        <ul><li><a href="index.html">Home</a></li></ul>
+        <ul><li><a href="index.html">About</a></li></ul>
+        <ul><li><a href="index.html">Home</a></li></ul>
+        <ul><li><a href="index.html">Home</a></li></ul>
+    </nav>
     <div class="wrapper" id="wrapper">
-        <nav>
-            <button id="menu" onclick="clicked()">MENU</button>
-            <img id="logo" src="mineola_robo_no-white.png">
-        </nav>
+        
         <div id="welcome">
+            <!-- Top navigation -->
+            <div class="topnav">
+                ffffffffff
+                <!-- Centered link -->
+                <div class="topnav-centered">
+                    <img src="mineola_robo_no-white.png">
+                </div>
+            
+                <!-- Left-aligned links (default) -->
+                <button id="menu_button" onclick="clicked()">MENU</button>
+            
+                <!-- Right-aligned links -->
+                <div class="topnav-right">
+                </div>
+            
+            </div>
             <div id="welcome_imgs">
                 <img id="img1" src="/welcome_imgs/img1.png">
                 <img id="img2" src="/welcome_imgs/img2.png">
@@ -33,7 +46,8 @@
                 <img id="img7" src="/welcome_imgs/img7.png">
             </div>
             <div class="centered">
-                    <div id="mineola_container"><div id="border_bottom"></div><h1 id="mineola">MINEOLA</h1></div>
+                    <div id="mineola_container"><h1 id="mineola">MINEOLA</h1></div>
+                    <div class="border"></div>
                     <div id="robotics_container"><h1 id="robotics">ROBOTICS</h1></div>
                     <!-- <div class="img_container"><img src="mineola_robo_no-white.png"></div> -->
             </div>

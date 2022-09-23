@@ -5,7 +5,8 @@ var img4 = document.getElementById("img4");
 var img5 = document.getElementById("img5");
 var img6 = document.getElementById("img6");
 var img7 = document.getElementById("img7");
-var currentImg = 1;
+// var currentImg = 1;
+var newStart = true
 
 
 /**
@@ -33,93 +34,92 @@ async function newCycle(seconds) {
  * 
  * @param {*} seconds How many seconds you want to wait before it cycles to the next picture
  */
+
 async function cycle(seconds){
     while (true) {
-        currentImg += 1;
-        if (currentImg == 8){
-            currentImg = 1;
-            console.log("currentImg was 8, now it's " + String(currentImg) + "...");
+        console.log("starting again");
+        for(let x = 1; x <= 7; x++) {
+            console.log("started for loop");
+            if (x == 1) {
+                if (newStart) {
+                    newStart = false;
+                    console.log('newStart was true');
+                    continue
+                }
+                else{
+                    console.log('newStart was false');
+                    img7.classList.add('fadingout');
+                    img1.classList.add('fadingin');
+                    sleep(3).then(() => {
+                        img7.style.opacity = 0;
+                        img7.classList.remove('fadingout');
+                        img1.style.opacity = 100;
+                        img1.classList.remove('fadingin');
+                    })
+                }
+            }
+            else if (x == 2) {
+                img1.classList.add('fadingout');
+                img2.classList.add('fadingin');
+                sleep(3).then(() => {
+                    img1.style.opacity = 0;
+                    img1.classList.remove('fadingout');
+                    img2.style.opacity = 100;
+                    img2.classList.remove('fadingin');
+                })
+            }
+            else if (x == 3) {
+                img2.classList.add('fadingout');
+                img3.classList.add('fadingin');
+                sleep(3).then(() => {
+                    img2.style.opacity = 0;
+                    img2.classList.remove('fadingout');
+                    img3.style.opacity = 100;
+                    img3.classList.remove('fadingin');
+                })
+            }
+            else if (x == 4) {
+                img3.classList.add('fadingout');
+                img4.classList.add('fadingin');
+                sleep(3).then(() => {
+                    img3.style.opacity = 0;
+                    img3.classList.remove('fadingout');
+                    img4.style.opacity = 100;
+                    img4.classList.remove('fadingin');
+                })
+            }
+            else if (x == 5) {
+                img4.classList.add('fadingout');
+                img5.classList.add('fadingin');
+                sleep(3).then(() => {
+                    img4.style.opacity = 0;
+                    img4.classList.remove('fadingout');
+                    img5.style.opacity = 100;
+                    img5.classList.remove('fadingin');
+                })
+            }
+            else if (x == 6) {
+                img5.classList.add('fadingout');
+                img6.classList.add('fadingin');
+                sleep(3).then(() => {
+                    img5.style.opacity = 0;
+                    img5.classList.remove('fadingout');
+                    img6.style.opacity = 100;
+                    img6.classList.remove('fadingin');
+                })
+            }
+            else if (x == 7) {
+                img6.classList.add('fadingout');
+                img7.classList.add('fadingin');
+                sleep(3).then(() => {
+                    img6.style.opacity = 0;
+                    img6.classList.remove('fadingout');
+                    img7.style.opacity = 100;
+                    img7.classList.remove('fadingin');
+                })
+            }
+            await sleep(seconds);
         }
-        if (currentImg == 1){
-            console.log("currentImg is " + String(currentImg - 1) + ". Now fading to img" + String(currentImg));
-            img7.classList.add("fadingout");
-            img1.classList.add("fadingin");
-            sleep(3).then(() => {
-                img7.style.opacity = 0;
-                img7.classList.remove("fadingout");
-                img1.style.opacity = 100;
-                img1.classList.remove("fadingin");
-            });
-        }
-        else if (currentImg == 2){
-            console.log("currentImg is " + String(currentImg - 1) + ". Now fading to img" + String(currentImg));
-            img1.classList.add("fadingout");
-            img2.classList.add("fadingin");
-            sleep(3).then(() => {
-                img1.style.opacity = 0;
-                img1.classList.remove("fadingout");
-                img2.style.opacity = 100;
-                img2.classList.remove("fadingin");
-            });
-        }
-        else if (currentImg == 3){
-            console.log("currentImg is " + String(currentImg - 1) + ". Now fading to img" + String(currentImg));
-            img2.classList.add("fadingout");
-            img3.classList.add("fadingin");
-            sleep(3).then(() => {
-                img2.style.opacity = 0;
-                img2.classList.remove("fadingout");
-                img3.style.opacity = 100;
-                img3.classList.remove("fadingin");
-            });
-        }
-        else if (currentImg == 4){
-            console.log("currentImg is " + String(currentImg - 1) + ". Now fading to img" + String(currentImg));
-            img3.classList.add("fadingout");
-            img4.classList.add("fadingin");
-            sleep(3).then(() => {
-                img3.style.opacity = 0;
-                img3.classList.remove("fadingout");
-                img4.style.opacity = 100;
-                img4.classList.remove("fadingin");
-            });
-        }
-        else if (currentImg == 5){
-            console.log("currentImg is " + String(currentImg - 1) + ". Now fading to img" + String(currentImg));
-            img4.classList.add("fadingout");
-            img5.classList.add("fadingin");
-            sleep(3).then(() => {
-                img4.style.opacity = 0;
-                img4.classList.remove("fadingout");
-                img5.style.opacity = 100;
-                img5.classList.remove("fadingin");
-            });
-        }
-        else if (currentImg == 6){
-            console.log("currentImg is " + String(currentImg - 1) + ". Now fading to img" + String(currentImg));
-            img5.classList.add("fadingout");
-            img6.classList.add("fadingin");
-            sleep(3).then(() => {
-                img5.style.opacity = 0;
-                img5.classList.remove("fadingout");
-                img6.style.opacity = 100;
-                img6.classList.remove("fadingin");
-            });
-        }
-        else if (currentImg == 7){
-            console.log("currentImg is " + String(currentImg) + ". Now fading to img" + String(currentImg + 1));
-            img6.classList.add("fadingout");
-            img7.classList.add("fadingin");
-            sleep(3).then(() => {
-                img6.style.opacity = 0;
-                img6.classList.remove("fadingout");
-                img7.style.opacity = 100;
-                img7.classList.remove("fadingin");
-            });
-        }
-
-
-        await sleep(seconds);
     }
 }
 
