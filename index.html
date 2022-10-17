@@ -9,33 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
+    <button id="menu_button" onclick="clicked()" class="idle"><i class="bi bi-list idle" id="menu_icon">MENU</i></button>
     <nav id="menu_nav">
-        <ul><li><a href="index.html">Home</a></li></ul>
-        <ul><li><a href="index.html">About</a></li></ul>
-        <ul><li><a href="index.html">Home</a></li></ul>
-        <ul><li><a href="index.html">Home</a></li></ul>
+        <div id="menu_nav_wrapper">
+            <ul><li><a id="home" class="out" href="index.html">Home</a></li></ul>
+            <ul><li><a id="about" class="out" href="index.html">About</a></li></ul>
+            <ul><li><a id="contact" class="out" href="index.html">Contact</a></li></ul>
+            <ul><li><a id="code" class="out" href="index.html">Scout Code</a></li></ul>
+        </div>
     </nav>
-    <div class="wrapper" id="wrapper">
-        
+    <div id="logo_wrapper" ><img class="btnDeactive" id="logo" src="mineola_robo_no-white.png"></div>
+    <div class="wrapper pulled" id="wrapper">
         <div id="welcome">
+            
+
             <!-- Top navigation -->
-            <div class="topnav">
-                ffffffffff
-                <!-- Centered link -->
-                <div class="topnav-centered">
-                    <img src="mineola_robo_no-white.png">
-                </div>
-            
-                <!-- Left-aligned links (default) -->
-                <button id="menu_button" onclick="clicked()">MENU</button>
-            
-                <!-- Right-aligned links -->
-                <div class="topnav-right">
-                </div>
-            
-            </div>
             <div id="welcome_imgs">
                 <img id="img1" src="/welcome_imgs/img1.png">
                 <img id="img2" src="/welcome_imgs/img2.png">
