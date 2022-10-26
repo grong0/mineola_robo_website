@@ -8,6 +8,8 @@ contact = document.getElementById("contact");
 about = document.getElementById("about");
 code = document.getElementById("code");
 
+var n = true;
+
 // var toggle = 0;
 // var firstTime = True;
 
@@ -37,8 +39,13 @@ code = document.getElementById("code");
 // }
 
 function clicked(){
-    wrapper.classList.toggle('pushed');
-    wrapper.classList.toggle('pulled');
+    if (n) {
+        wrapper.classList.add('pushed');
+        n = false;
+    } else {
+        wrapper.classList.toggle('pushed');
+        wrapper.classList.toggle('pulled');
+    }
     menu_button.classList.toggle('clicked');
     menu_button.classList.toggle('idle');
     icon.classList.toggle('clicked');
@@ -54,6 +61,4 @@ function clicked(){
     contact.classList.toggle('out');
     code.classList.toggle('in');
     code.classList.toggle('out');
-
-
 }
