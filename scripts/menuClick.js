@@ -46,10 +46,13 @@ function clicked(){
         wrapper.classList.toggle('pushed');
         wrapper.classList.toggle('pulled');
     }
+    
     menu_button.classList.toggle('clicked');
     menu_button.classList.toggle('idle');
+
     icon.classList.toggle('clicked');
     icon.classList.toggle('idle');
+
     logo.classList.toggle('btnActive');
     logo.classList.toggle('btnDeactive');
 
