@@ -68,7 +68,6 @@ html, body{ margin:0; padding:0; height:100%; background: black; position: relat
 }
 
 #welcome{
-    font-family: 'Alfa Slab One', cursive;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,28 +98,6 @@ html, body{ margin:0; padding:0; height:100%; background: black; position: relat
 }
 
 
-
-@keyframes fadein{
-    from{opacity: 0;}
-    to{opacity: 100;}
-}
-@keyframes fadeout{
-    from{opacity: 100;}
-    to{opacity: 0;}
-}
-
-.fadingin{
-    animation-name: fadein;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-.fadingout{
-    animation-name: fadeout;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
 
 #img1{
     top: -75%;
@@ -507,40 +484,22 @@ html, body{ margin:0; padding:0; height:100%; background: black; position: relat
     font-size: 45px;
 }
 .infinScroll{
-    position: relative;
-    height: 40vh;
+    display: flex;
+    flex-direction: row;
     width: 100%;
+    height: auto;
     overflow-x: hidden;
 }
-.scrollingImage{
+.scrollingImgage{
     display: grid;
-    position: absolute;
     height: 100%;
-    width: 250%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100%;
-    transform: translate3d(0, 0, 0);
-}
-.goLeft{
-    left: 0;
-    animation: goLeft 16s linear infinite;
-}
-.goRight{
-    right: 0;
-    animation: goRight 16s linear infinite;
+    width: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 .infinScroll img{
-    width: auto;
-    height: 100%;
-    aspect-ratio: 16/9;
-}
-@keyframes goLeft{
-    /* from{ left: 0; } */
-    to{ transform: translateX(-68.8%); }
-}
-@keyframes goRight{
-    /* from{ right: 0; } */
-    to{ transform: translateX(68.8%) }
+    width: 25%;
+    height: auto;
 }
 .whoWeAreParagraphWrapper{
     width: 80%;

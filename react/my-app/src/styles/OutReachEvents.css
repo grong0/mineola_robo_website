@@ -1,0 +1,82 @@
+
+
+#outreach_events {
+
+    width: 100%;
+    height: max-content;
+    margin-top: 60px;
+    /* gap: 60px; */
+    perspective: 2500px;
+
+    position: relative;
+    height: max-content;
+
+    /* display: flex; */
+}
+
+#event {
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.5));
+    padding: 12px;
+    background-color: white;
+    width: 45%;
+    transform: rotate3d(0, 1, 0, 4deg);
+    cursor: pointer;
+    z-index: 0.1;
+
+    position: absolute;
+}
+#event:nth-child(even) {
+    right: 0;
+    transform: rotate3d(0, 1, 0, -4deg);
+}
+#event img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 20px;
+}
+
+#outreach_events_leftside {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    perspective: 2000px;
+}
+#outreach_events_leftside #event {
+    transform: rotate3d(0, 1, 0, 4deg);
+}
+
+#outreach_events_rightside {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    margin-top: 128px;
+    perspective: 2000px;
+}
+#outreach_events_rightside #event {
+    transform: rotate3d(0, 1, 0, -4deg);
+}
+
+#event_date {
+    margin-top: -0.5em;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.selected {
+    z-index: 1;
+}
+.unselected {
+    /* animation-name: disengage;
+    animation-duration: 0.1s;
+    animation-delay: 5; */
+}
+@keyframes disengage{
+    from {z-index: 1;}
+    to {z-index: 0;}
+}

@@ -1,0 +1,57 @@
+#frcContent {
+}
+#frcContent_title {
+	font-family: "Alfa Slab One";
+	color: black;
+	line-height: 5px;
+}
+.title {
+	font-family: "Alfa Slab One";
+	color: black;
+	font-size: 6em;
+}
+.subtitle {
+	font-family: "Alfa Slab One";
+	color: black;
+	font-size: 3em;
+}
+
+
+#frcContent_robotContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 20px;
+	padding: 20px;
+	width: 100%;
+	height: 600px;
+	border-radius: 24px;
+}
+#robot {
+	border-radius: 24px;
+	overflow: hidden;
+	height: 100%;
+	width: auto;
+}
+#frontFace {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#frontFace_title {
+	z-index: 0.1;
+	position: absolute;
+}
+#frontFace_backgroundImage {
+	height: 130%;
+}
+#backFace {
+}

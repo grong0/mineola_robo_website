@@ -1,0 +1,27 @@
+#miniOutReach {
+}
+
+#miniOutReach_images {
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto;
+
+	gap: 32px;
+}
+#miniOutReach_image {
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#miniOutReach_images img {
+	border-radius: 20px;
+	width: 100%;
+}
+
+#miniOutReach_image div {
+	font-size: 1.5em;
+	font-style: italic;
+}

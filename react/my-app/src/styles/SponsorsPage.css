@@ -1,0 +1,65 @@
+#sponsor-icon-grid {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sponsors-container {
+	width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sponsors-title {
+	font-size: 50px;
+
+    font-family: "Alfa Slab One";
+    color: black;
+    
+
+    margin-bottom: -50px;
+}
+#sponsors-title-gold {
+    margin-top: 100px;
+    color: gold;
+}
+#sponsors-title-silver {
+    color: silver;
+}
+#sponsors-title-bronze {
+    color: rgb(205, 127, 50);
+}
+
+
+#gold-sponsors,
+#silver-sponsors,
+#bronze-sponsors {
+	display: grid;
+	gap: 50px;
+
+	width: 100%;
+	/* padding-left: 100px;
+    padding-right: 100px; */
+	padding: 75px;
+	box-sizing: border-box;
+}
+#gold-sponsors {
+	grid-template-columns: auto auto;
+}
+#silver-sponsors {
+	grid-template-columns: auto auto auto;
+}
+#bronze-sponsors {
+	grid-template-columns: auto auto auto auto;
+}
+
+.sponsors-logo {
+	width: 100%;
+    aspect-ratio: 1;
+
+    background-position: center;
+    background-size: cover;
+}

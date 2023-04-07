@@ -1,0 +1,63 @@
+:root {
+	--width: 600px;
+	--num-of-images: 7;
+	--howmany-one-page: calc(100vw / var(--width));
+	--width-of-whole-thing: calc(var(--width) * var(--num-of-images));
+	--cut-off-img: toString(var(--howmany-one-page));
+	--aspect-ratio-width: 16;
+	--aspect-ratio-height: 9;
+	--aspect-ratio: calc(var(--aspect-ratio-width) / var(--aspect-ratio-height));
+	--rev-aspect-ratio: calc(var(--aspect-ratio-height) / var(--aspect-ratio-width));
+	--height: calc(var(--width) * var(--rev-aspect-ratio));
+}
+
+#whoweare {
+	width: 100%;
+}
+
+#slideshow {
+	width: 100%;
+}
+
+#top-slideshow,
+#bot-slideshow {
+	position: relative;
+	height: var(--height);
+}
+
+.long-img {
+	display: flex;
+	flex-direction: row;
+	width: min-content;
+	position: absolute;
+}
+.long-img img {
+	width: var(--width);
+	aspect-ratio: var(--aspect-ratio);
+}
+
+#left-long {
+	left: 0;
+	animation: left-long 8s 0s infinite linear;
+}
+#right-long {
+	right: 0;
+	animation: right-long 8s 0s infinite linear;
+}
+
+@keyframes left-long {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(calc(var(--width) * 4) * -1);
+	}
+}
+@keyframes right-long {
+	from {
+		right: 0;
+	}
+	to {
+		right: calc(calc(var(--width) * 4) * -1);
+	}
+}
