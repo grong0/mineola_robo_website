@@ -230,8 +230,8 @@ function FRCTeam() {
 							// transition={{ duration: DURATION }}
 							// ref={pos}
 						>
-							<span>Lorem</span>
-							<span>Ipsum</span>
+							<span>Lucya</span>
+							<span>Chairmans</span>
 						</motion.div>
 						<motion.div
 							id="student"

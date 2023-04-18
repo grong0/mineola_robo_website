@@ -6,23 +6,43 @@ import { motion } from "framer-motion";
 const EASE = "easeInOut";
 const DURATION = 0.2;
 
-const robot = {
-	opening: {
-		width: "100%",
-		transform: "translate3d(0deg, 180deg, 0deg)",
-		translate3d: "(0deg, 180deg, 0deg)",
-	},
-	closing: {
-		width: "0%",
-		transform: "translate3d(0deg, 0deg, 0deg)",
-		translate3d: "(0deg, 0deg, 0deg)",
-	},
-	idle: {
-		width: "100%",
-		transform: "translate3d(0deg, 0deg, 0deg)",
-		translate3d: "(0deg, 0deg, 0deg)",
-	},
-};
+var robot;
+
+console.log(window.innerWidth)
+if (window.innerWidth <= 1200) {
+    console.log("doing small one");
+    robot = {
+        opening: {
+        },
+        closing: {
+        },
+        idle: {
+        },
+    };
+} else {
+    console.log("doing big one");
+    robot = {
+        opening: {
+            width: "100%",
+            transform: "translate3d(0deg, 180deg, 0deg)",
+            translate3d: "(0deg, 180deg, 0deg)",
+        },
+        closing: {
+            width: "0%",
+            transform: "translate3d(0deg, 0deg, 0deg)",
+            translate3d: "(0deg, 0deg, 0deg)",
+        },
+        idle: {
+            width: "100%",
+            transform: "translate3d(0deg, 0deg, 0deg)",
+            translate3d: "(0deg, 0deg, 0deg)",
+        },
+    };
+}
+
+
+
+// document.width >= 1200
 
 const robot_title = {
 	hover: {
@@ -49,10 +69,10 @@ function FRCRobots() {
 
 	return (
 		<div className="content" id="frcContent">
-            <div className="titleElement">
-                <div>6806</div>
-                <div>Wild Reds</div>
-            </div>
+			<div className="titleElement">
+				<div>6806</div>
+				<div>Wild Reds</div>
+			</div>
 
 			<p className="description">
 				&emsp;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis vel amet ea ipsum
@@ -64,19 +84,7 @@ function FRCRobots() {
 
 			<h2 className="subtitle">Robots over the years</h2>
 
-			<motion.div
-				id="frcContent_robotContainer"
-				animate={
-					toggleRobot === "robot1"
-						? { color: "red" }
-						: toggleRobot === "robot2"
-						? { color: "rgb(0, 255, 0)" }
-						: toggleRobot === "robot3"
-						? { color: "rgb(0, 0, 255)" }
-						: { color: "rgb(255, 255, 0)" }
-				}
-				transition={{ ease: EASE, duration: DURATION }}
-			>
+			<div id="frcContent_robotContainer">
 				<motion.div
 					id="robot"
 					onClick={toggleRobot1}
@@ -176,7 +184,7 @@ function FRCRobots() {
 					</div>
 					<div id="backFace"></div>
 				</motion.div>
-			</motion.div>
+			</div>
 		</div>
 	);
 }

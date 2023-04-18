@@ -15,8 +15,8 @@ function Home() {
 		<div className="page" id="homeContent">
 			<WelcomePage />
 			{/* Games */}
-            <MiniSponsors />
-            <WhoWeAre />
+			<MiniSponsors />
+			<WhoWeAre />
 			<MiniOutReach />
 		</div>
 	);

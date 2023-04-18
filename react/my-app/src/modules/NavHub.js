@@ -89,9 +89,9 @@ const wrapper = {
 		// width: "97vw",
 		// "margin-top": "69px",
 		// "border-radius": "14px",
-		left: "22%",
-		height: "90%",
-		top: "8%",
+		left: "23em",
+		height: "calc(97vh - 4.5em)",
+		top: "4.5em",
 		"border-radius": "14px",
 	},
 	closing: {
@@ -106,16 +106,13 @@ const wrapper = {
 	},
 };
 
-export function exportedTogglePos() {
-	if (togglePos) {
-		togglePos();
-	}
-}
-
 function NavHub() {
 	const [toggleNavView, setToggleNavView] = useState(false);
 	function togglePos() {
 		setToggleNavView(toggleNavView ? false : true);
+		if (aboutSubList) {
+			toggleAboutSubList();
+		}
 	}
 
 	const [aboutSubList, setAboutSubList] = useState(false);
@@ -123,6 +120,11 @@ function NavHub() {
 		setAboutSubList(aboutSubList ? false : true);
 	}
 
+	function goToAnotherPage() {
+		togglePos();
+		wrapperEle.scrollTo(0, 0);
+	}
+    
 	return (
 		<>
 			<motion.button
@@ -155,7 +157,12 @@ function NavHub() {
 					>
 						<li>
 							<Link id="home" className="out" to="/">
-								<motion.div variants={buttonBounce} whileHover={"hover"} whileTap={"tap"}>
+								<motion.div
+									variants={buttonBounce}
+									whileHover={"hover"}
+									whileTap={"tap"}
+									onTap={goToAnotherPage}
+								>
 									Home
 								</motion.div>
 							</Link>
@@ -169,9 +176,15 @@ function NavHub() {
 					>
 						<li>
 							{/* <Link id="about" className="out" to="/about"> */}
-								<motion.div id="list_opener" className="out" variants={buttonBounce} whileHover={"hover"} whileTap={"tap"}>
-									About
-								</motion.div>
+							<motion.div
+								id="list_opener"
+								className="out"
+								variants={buttonBounce}
+								whileHover={"hover"}
+								whileTap={"tap"}
+							>
+								About
+							</motion.div>
 							{/* </Link> */}
 							<motion.div
 								id="insideNavList"
@@ -181,13 +194,33 @@ function NavHub() {
 								transition={{ ease: "easeInOut", duration: 0.5 }}
 							>
 								<Link id="frc_link" to="/frc">
-									<motion.div variants={buttonBounce} whileHover={"hover"} whileTap={"tap"}>
+									<motion.div
+										variants={buttonBounce}
+										whileHover={"hover"}
+										whileTap={"tap"}
+										onTap={goToAnotherPage}
+									>
 										FRC
 									</motion.div>
 								</Link>
 								<Link id="outreach_link" to="/outreach">
-									<motion.div variants={buttonBounce} whileHover={"hover"} whileTap={"tap"}>
+									<motion.div
+										variants={buttonBounce}
+										whileHover={"hover"}
+										whileTap={"tap"}
+										onTap={goToAnotherPage}
+									>
 										Outreach
+									</motion.div>
+								</Link>
+								<Link id="sponsors_link" to="/sponsors">
+									<motion.div
+										variants={buttonBounce}
+										whileHover={"hover"}
+										whileTap={"tap"}
+										onTap={goToAnotherPage}
+									>
+										Sponsors
 									</motion.div>
 								</Link>
 							</motion.div>
@@ -200,7 +233,12 @@ function NavHub() {
 					>
 						<li>
 							<Link id="contact" className="out" to="/contact">
-								<motion.div variants={buttonBounce} whileHover={"hover"} whileTap={"tap"}>
+								<motion.div
+									variants={buttonBounce}
+									whileHover={"hover"}
+									whileTap={"tap"}
+									onTap={goToAnotherPage}
+								>
 									Contact
 								</motion.div>
 							</Link>

@@ -9,8 +9,8 @@
 	justify-content: center;
 	overflow: hidden;
 
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 
 	height: 100vh;
 	width: 100vw;
@@ -24,6 +24,10 @@
 	overflow: hidden;
 	position: relative;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 	height: 100vh;
 	width: 100vw;
 	margin-top: 0px;
@@ -33,36 +37,31 @@
 	/* width: 100%; */
 	position: absolute;
 	background: black;
-	left: 0;
 	width: 100%;
-	height: auto;
+
+    height: auto;
+
 }
 #img1 {
-	top: -75%;
+	/* top: -75%; */
 	opacity: 100;
 }
 #img2 {
-	top: -10%;
 	opacity: 0;
 }
 #img3 {
-	top: -30%;
 	opacity: 0;
 }
 #img4 {
-	top: -20%;
 	opacity: 0;
 }
 #img5 {
-	top: -25%;
 	opacity: 0;
 }
 #img6 {
-	top: -35%;
 	opacity: 0;
 }
 #img7 {
-	top: -30%;
 	opacity: 0;
 }
 
@@ -213,5 +212,27 @@
 	}
 	to {
 		opacity: 0;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	#mineola,
+	#robotics {
+		font-size: 15vw;
+		margin: 0;
+
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+		animation-iteration-count: 1;
+		animation-delay: 3s;
+	}
+
+	#mineola_container,
+	#robotics_container {
+		display: inline-block;
+		height: 100%;
+		overflow-y: hidden;
+		width: auto;
+		height: 16vw;
 	}
 }

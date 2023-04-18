@@ -2,12 +2,19 @@ import React, { useEffect } from "react";
 import "../styles/Footer.css";
 
 import { Link } from "react-router-dom";
+import { wrapperEle } from "./NavHub";
 
 function getCurrentYear() {
     const date = new Date();
     const year = date.getFullYear().toString();
     
     return year;
+}
+
+function scrollUp() {
+    if (wrapperEle) {
+        wrapperEle.scrollTo(0, 0);
+    }
 }
 
 function Footer() {
@@ -18,27 +25,27 @@ function Footer() {
 			<div id="nav-link">
 				<ul>
 					<li>
-						<Link id="page-link" to="/">
+						<Link id="page-link" to="/" onTouchEndCapture={scrollUp}>
 							Home
 						</Link>
 					</li>
 					<li>
-						<Link id="page-link" to="/outreach">
+						<Link id="page-link" to="/outreach" onTouchEndCapture={scrollUp}>
 							Outreach
 						</Link>
 					</li>
 					<li>
-						<Link id="page-link" to="/frc">
+						<Link id="page-link" to="/frc" onTouchEndCapture={scrollUp}>
 							FRC
 						</Link>
 					</li>
 					<li>
-						<Link id="page-link" to="/contact">
+						<Link id="page-link" to="/contact" onTouchEndCapture={scrollUp}>
 							Contact
 						</Link>
 					</li>
 					<li>
-						<Link id="page-link" to="/scout">
+						<Link id="page-link" to="/scout" onTouchEndCapture={scrollUp}>
 							Scout Code
 						</Link>
 					</li>

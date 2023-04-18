@@ -1,12 +1,20 @@
 #miniOutReach {
 }
 
+#mini-outreach-paragraph {
+    margin-top: -1em;
+}
+
+/* 1330 */
+
 #miniOutReach_images {
 	width: 100%;
 
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto;
+    margin-top: 1em;
+
+	display: flex;
+	/* grid-template-columns: auto auto; */
+	/* grid-template-rows: auto; */
 
 	gap: 32px;
 }
@@ -24,4 +32,24 @@
 #miniOutReach_image div {
 	font-size: 1.5em;
 	font-style: italic;
+}
+
+#inline-outreach-link {
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 1330px) {
+    #miniOutReach_images {
+        display: block;
+    }
+    #miniOutReach_image {
+        margin-bottom: 5em;
+    }
+    #miniOutReach_image:last-of-type {
+        margin-bottom: 0px;
+    }
+    #miniOutReach {
+        width: 75%;
+    }
 }

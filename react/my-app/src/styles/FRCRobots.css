@@ -1,20 +1,12 @@
 #frcContent {
+    width: 80%
 }
 #frcContent_title {
 	font-family: "Alfa Slab One";
 	color: black;
 	line-height: 5px;
 }
-.title {
-	font-family: "Alfa Slab One";
-	color: black;
-	font-size: 6em;
-}
-.subtitle {
-	font-family: "Alfa Slab One";
-	color: black;
-	font-size: 3em;
-}
+
 
 
 #frcContent_robotContainer {
@@ -54,4 +46,13 @@
 	height: 130%;
 }
 #backFace {
+}
+
+@media only screen and (max-width: 900px) {
+    #frcContent_robotContainer {
+        flex-direction: column;
+    }
+    #frontFace_backgroundImage {
+        height: 100%;
+    }
 }

@@ -4,12 +4,16 @@
 
     width: 100%;
     height: max-content;
-    margin-top: 60px;
+    margin-top: -1em;
     /* gap: 60px; */
     perspective: 2500px;
 
     position: relative;
     height: max-content;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-sizing: border-box;
 
     /* display: flex; */
 }
@@ -19,22 +23,33 @@
     filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.5));
     padding: 12px;
     background-color: white;
-    width: 45%;
-    transform: rotate3d(0, 1, 0, 4deg);
-    cursor: pointer;
-    z-index: 0.1;
+    width: 100%;
+    margin-top: 5em;
 
-    position: absolute;
+    /* transform: rotate3d(0, 1, 0, 4deg); */
+    /* cursor: pointer; */
+    /* z-index: 0.1; */
+
+    /* position: absolute; */
 }
 #event:nth-child(even) {
     right: 0;
-    transform: rotate3d(0, 1, 0, -4deg);
+    /* transform: rotate3d(0, 1, 0, -4deg); */
 }
 #event img {
     width: 100%;
     height: auto;
 
     border-radius: 20px;
+}
+
+#outreach_events_leftside,
+#outreach_events_rightside {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+
+    box-sizing: border-box;
 }
 
 #outreach_events_leftside {
@@ -44,6 +59,8 @@
     grid-row-end: 2;
 
     perspective: 2000px;
+
+    padding-right: 30px;
 }
 #outreach_events_leftside #event {
     transform: rotate3d(0, 1, 0, 4deg);
@@ -57,6 +74,8 @@
 
     margin-top: 128px;
     perspective: 2000px;
+
+    padding-left: 30px;
 }
 #outreach_events_rightside #event {
     transform: rotate3d(0, 1, 0, -4deg);

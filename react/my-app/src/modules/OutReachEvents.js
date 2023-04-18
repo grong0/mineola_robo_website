@@ -74,130 +74,52 @@ function OutReachEvents() {
 			</p>
 
 			<motion.div id="outreach_events" variants={eventMotion}>
-				{/* <div id="outreach_events_leftside"> */}
-				<motion.div
-					id="event"
-					className="unselected"
-					ref={(el) => {
-						eventEles.push(el);
-					}}
-					style={{ marginTop: 230 * (1 - 1) }}
-					variants={eventMotion}
-					animate={eventToggled == 1 ? "openLeft" : "closeLeft"}
-					transition={{ ease: EASE, type: TYPE, duration: DURATION }}
-					onTap={() => {
-						updateEventToggled(1);
-					}}
-				>
-					<img src="./assets/tempImg.jpg" />
-					<div className="subtitle">Event</div>
-					<div id="event_date" className="subtitle">
-						xx/xx/xx
+				<div id="outreach_events_leftside">
+					<div id="event" className="unselected">
+						<img src="./assets/tempImg.jpg" />
+						<div className="subtitle">Event</div>
+						<div id="event_date" className="subtitle">
+							xx/xx/xx
+						</div>
 					</div>
-				</motion.div>
-				<motion.div
-					id="event"
-					className="unselected"
-					ref={(el) => {
-						eventEles.push(el);
-					}}
-					style={{ marginTop: 230 * (2 - 1) }}
-					variants={eventMotion}
-					animate={eventToggled == 2 ? "openRight" : "closeRight"}
-					transition={{ ease: EASE, type: TYPE, duration: DURATION }}
-					onTap={() => {
-						updateEventToggled(2);
-					}}
-				>
-					<img src="./assets/tempImg.jpg" />
-					<div className="subtitle">Event</div>
-					<div id="event_date" className="subtitle">
-						xx/xx/xx
+					<div id="event" className="unselected">
+						<img src="./assets/tempImg.jpg" />
+						<div className="subtitle">Event</div>
+						<div id="event_date" className="subtitle">
+							xx/xx/xx
+						</div>
 					</div>
-				</motion.div>
-				<motion.div
-					id="event"
-					className="unselected"
-					ref={(el) => {
-						eventEles.push(el);
-					}}
-					style={{ marginTop: 230 * (3 - 1) }}
-					variants={eventMotion}
-					animate={eventToggled == 3 ? "openLeft" : "closeLeft"}
-					transition={{ ease: EASE, type: TYPE, duration: DURATION }}
-					onTap={() => {
-						updateEventToggled(3);
-					}}
-				>
-					<img src="./assets/tempImg.jpg" />
-					<div className="subtitle">Event</div>
-					<div id="event_date" className="subtitle">
-						xx/xx/xx
+					<div id="event" className="unselected">
+						<img src="./assets/tempImg.jpg" />
+						<div className="subtitle">Event</div>
+						<div id="event_date" className="subtitle">
+							xx/xx/xx
+						</div>
 					</div>
-				</motion.div>
-				{/* </div> */}
-				{/* <div id="outreach_events_rightside"> */}
-				<motion.div
-					id="event"
-					className="unselected"
-					ref={(el) => {
-						eventEles.push(el);
-					}}
-					style={{ marginTop: 230 * (4 - 1) }}
-					variants={eventMotion}
-					animate={eventToggled == 4 ? "openRight" : "closeRight"}
-					transition={{ ease: EASE, type: TYPE, duration: DURATION }}
-					onTap={() => {
-						updateEventToggled(4);
-					}}
-				>
-					<img src="./assets/tempImg.jpg" />
-					<div className="subtitle">Event</div>
-					<div id="event_date" className="subtitle">
-						xx/xx/xx
+				</div>
+				<div id="outreach_events_rightside">
+					<div id="event" className="unselected">
+						<img src="./assets/tempImg.jpg" />
+						<div className="subtitle">Event</div>
+						<div id="event_date" className="subtitle">
+							xx/xx/xx
+						</div>
 					</div>
-				</motion.div>
-				<motion.div
-					id="event"
-					className="unselected"
-					ref={(el) => {
-						eventEles.push(el);
-					}}
-					style={{ marginTop: 230 * (5 - 1) }}
-					variants={eventMotion}
-					animate={eventToggled == 5 ? "openLeft" : "closeLeft"}
-					transition={{ ease: EASE, type: TYPE, duration: DURATION }}
-					onTap={() => {
-						updateEventToggled(5);
-					}}
-				>
-					<img src="./assets/tempImg.jpg" />
-					<div className="subtitle">Event</div>
-					<div id="event_date" className="subtitle">
-						xx/xx/xx
+					<div id="event" className="unselected">
+						<img src="./assets/tempImg.jpg" />
+						<div className="subtitle">Event</div>
+						<div id="event_date" className="subtitle">
+							xx/xx/xx
+						</div>
 					</div>
-				</motion.div>
-				<motion.div
-					id="event"
-					className="unselected"
-					ref={(el) => {
-						eventEles.push(el);
-					}}
-					style={{ marginTop: 230 * (6 - 1) }}
-					variants={eventMotion}
-					animate={eventToggled == 6 ? "openRight" : "closeRight"}
-					transition={{ ease: EASE, type: TYPE, duration: DURATION }}
-					onTap={() => {
-						updateEventToggled(6);
-					}}
-				>
-					<img src="./assets/tempImg.jpg" />
-					<div className="subtitle">Event</div>
-					<div id="event_date" className="subtitle">
-						xx/xx/xx
+					<div id="event" className="unselected">
+						<img src="./assets/tempImg.jpg" />
+						<div className="subtitle">Event</div>
+						<div id="event_date" className="subtitle">
+							xx/xx/xx
+						</div>
 					</div>
-				</motion.div>
-				{/* </div> */}
+				</div>
 			</motion.div>
 		</div>
 	);

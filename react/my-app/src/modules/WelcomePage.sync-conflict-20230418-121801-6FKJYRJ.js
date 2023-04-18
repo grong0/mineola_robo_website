@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../styles/WelcomePage.css";
 import { motion } from "framer-motion";
 
+var containerEle;
+
 const welcomeTransition = {
 	from: {
 		height: "100vh",
@@ -27,13 +29,29 @@ function getElements(el) {
 	imageElements.push(el);
 }
 
-function WelcomePage() {
-	const [currentImg, setCurrentImg] = useState();
-	function updateCurrentImg(img) {
-		setCurrentImg(img);
+function updateImgSizings(imgList, container) {
+	if (container) {
+		imgList.forEach((element) => {
+			if (
+				container.clientWidth / container.clientHeight <
+				element.clientWidth / element.clientHeight
+			) {
+				element.style.width = "auto";
+				element.style.height = "100%";
+			} else {
+				element.style.width = "100%";
+				element.style.height = "auto";
+			}
+		});
 	}
+}
 
-    var containerEle;
+function WelcomePage() {
+	// useEffect(() => {
+	// 	window.addEventListener("resize", () => {
+	// 		updateImgSizings(imageElements, containerEle);
+	// 	});
+	// }, []);
 
 	useEffect(() => {
 		var img1 = imageElements[1 - 1];
@@ -43,9 +61,14 @@ function WelcomePage() {
 		var img5 = imageElements[5 - 1];
 		var img6 = imageElements[6 - 1];
 		var img7 = imageElements[7 - 1];
-		// var currentImg = 1;
+
+		var currentImg = 1;
 		var newStart = true;
 
+		/**
+		 *
+		 * @param duration Enter duration in seconds
+		 */
 		function sleep(duration) {
 			return new Promise((resolver) => setTimeout(resolver, duration * 1000));
 		}
@@ -54,12 +77,16 @@ function WelcomePage() {
 			while (true) {
 				await sleep(seconds);
 				for (let i = 1; i <= 7; i++) {
-					console.log("currentImg is " + String(i - 1) + ". Now fading to " + String(i));
+					// console.log("currentImg is " + String(i - 1) + ". Now fading to " + String(i));
 
 					await sleep(seconds);
 				}
 			}
 		}
+		/**
+		 *
+		 * @param {*} seconds How many seconds you want to wait before it cycles to the next picture
+		 */
 
 		async function cycle(seconds) {
 			while (true) {
@@ -142,30 +169,12 @@ function WelcomePage() {
 			}
 		}
 
-		function updateImageSizing(imageElements, containerEle) {
-			imageElements.forEach((el) => {
-				if (
-					containerEle.clientWidth / containerEle.clientHeight <
-					el.clientWidth / el.clientHeight
-				) {
-					el.style.width = "auto";
-					el.style.height = "100%";
-				} else {
-					el.style.width = "100%";
-					el.style.height = "auto";
-				}
-			});
-		}
-
-        
-
-		updateImageSizing(imageElements, containerEle);
+		updateImgSizings(imageElements, containerEle);
 		window.addEventListener("resize", () => {
-			updateImageSizing(imageElements, containerEle);
+			updateImgSizings(imageElements, containerEle);
 		});
 
 		sleep(8).then(() => {
-			// console.log("5 seconds are up, starting loop.")
 			cycle(8);
 		});
 	}, []);

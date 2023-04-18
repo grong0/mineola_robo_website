@@ -9,35 +9,38 @@ function WhoWeAre() {
 				<div></div>
 			</div>
 
-			<div id="slideshow">
-				<div id="top-slideshow">
-					<div className="long-img" id="left-long">
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
+			<div id="slideshow-container">
+				<div className="description" id="over-slideshow">
+					&emsp;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis vel amet ea ipsum
+					odio veniam quaerat numquam iure, dolorum suscipit et iusto porro facilis corporis
+					repellat ducimus fuga hic? Eveniet! Lorem ipsum dolor sit, amet consectetur adipisicing
+					elit. Inventore minus, similique alias quis accusamus neque architecto deserunt quam esse
+					quae hic voluptates iusto accusantium vel mollitia sunt expedita. Asperiores, maxime!
+				</div>
+				<div id="slideshow">
+					<div id="top-slideshow">
+						<div className="long-img" id="left-long">
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+						</div>
+					</div>
+					<div id="bot-slideshow">
+						<div className="long-img" id="right-long">
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+							<img src="./assets/tempImg.jpg" />
+						</div>
 					</div>
 				</div>
-				<div id="bot-slideshow">
-					<div className="long-img" id="right-long">
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-						<img src="./assets/tempImg.jpg" />
-					</div>
-				</div>
-			</div>
-
-			<div className="description">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident veniam odio molestiae
-				magnam quam optio laboriosam voluptate sed, nisi incidunt repudiandae recusandae nihil iure
-				praesentium nesciunt atque architecto officiis consequuntur?
 			</div>
 		</div>
 	);
