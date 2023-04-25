@@ -3,13 +3,10 @@
 }
 
 #mini-sponsors-container {
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
-	background-color: purple;
 }
 
 #mini-sponsors-title {
@@ -26,17 +23,46 @@
 #mini-sponsors-silver,
 #mini-sponsors-bronze {
 	display: grid;
-	gap: 4em;
+	gap: 10%;
 
 	padding: 12px;
 	box-sizing: border-box;
-	width: 70%;
+	max-width: 70%;
 	margin-left: auto;
     margin-right: auto;
+    margin-top: -2em;
+}
+
+#mini-sponsors-gold img {
+    width: 100%;
+	aspect-ratio: 1;
+    border-radius: 12px;
+    position: relative;
+
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+
+    transition: box-shadow 0.1s;
+}
+#mini-sponsors-gold img:hover {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+}
+#sponsorContainer {
+    position: relative;
+}
+#sponsorName {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: "Poppins";
+    font-size: 1.25em;
+    text-align: center;
 }
 
 #mini-sponsors-gold {
-	grid-template-columns: auto auto auto auto;
+    width: 40%;
+	grid-template-columns: 45% 45%;
 }
 #mini-sponsors-silver {
 	grid-template-columns: auto auto auto auto auto;
@@ -51,6 +77,13 @@
 
 	background-position: center;
 	background-size: cover;
+
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+
+    transition: filter;
+}
+.mini-sponsors-image:hover {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5))
 }
 
 @media only screen and (max-width: 900px) {

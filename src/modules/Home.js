@@ -2,21 +2,18 @@ import React from "react";
 import "../styles/Home.css";
 
 import WelcomePage from "./WelcomePage";
-import FRC from "./FRCRobots";
-import TheTeam from "./FRCTeam";
-import OutReach from "./OutReachEvents";
-import MiniOutReach from "./MiniOutReach";
-import WhoWeAre from "./WhoWeAre.js";
-import SponsorsPage from "./SponsorsPage.js";
 import MiniSponsors from "./MiniSponsors.js";
+import WhoWeAre from "./WhoWeAre.js";
+import CurrentRobot from "./CurrentRobot";
+import MiniOutReach from "./MiniOutReach";
 
 function Home() {
 	return (
 		<div className="page" id="homeContent">
 			<WelcomePage />
-			{/* Games */}
 			<MiniSponsors />
 			<WhoWeAre />
+            <CurrentRobot />
 			<MiniOutReach />
 		</div>
 	);

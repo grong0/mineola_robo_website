@@ -22,7 +22,7 @@ function Footer() {
 
 	return (
 		<div id="footer">
-			<div id="nav-link">
+			{/* <div id="nav-link">
 				<ul>
 					<li>
 						<Link id="page-link" to="/" onTouchEndCapture={scrollUp}>
@@ -50,7 +50,7 @@ function Footer() {
 						</Link>
 					</li>
 				</ul>
-			</div>
+			</div> */}
 			<div id="copywright">
 				<div id="copywright-content">
                 ©2022-<span ref={(el) => {
@@ -60,7 +60,7 @@ function Footer() {
 
                         el.innerHTML = year;
                     }
-                }}></span>, mineolarobotics.com
+                }}></span>, Wild Reds at Mineola High School
                 </div>
 			</div>
 		</div>

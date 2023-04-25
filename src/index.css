@@ -34,7 +34,6 @@ code {
 }
 .titleElement {
 	font-family: "Alfa Slab One";
-	color: black;
 
 	display: flex;
 	flex-direction: column;
@@ -50,14 +49,16 @@ code {
 	margin-bottom: 2em; */
 }
 .titleElement div:last-of-type {
-	font-size: 3em;
-	margin-top: -0.5em;
+	font-size: 2em;
+    color: grey;
 }
 .titleElement div:first-of-type {
-	font-size: 6em;
+	font-size: 5em;
+    line-height: 1em;
+    color: black;
 }
 .description {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Poppins';
 	color: black;
 	font-size: 1.5em;
 	width: 100%;

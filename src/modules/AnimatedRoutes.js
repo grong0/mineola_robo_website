@@ -11,6 +11,7 @@ import OutReach from "./OutReach.js";
 
 import Footer from "./Footer.js";
 import Sponsors from "./Sponsors.js";
+import ElsePage from "./PageNotFound.js";
 
 function AnimatedRoutes() {
 	var location = useLocation();
@@ -25,6 +26,7 @@ function AnimatedRoutes() {
                 <Route path="/sponsors" element={<Sponsors />} />
 				{/* <Route path={"/contact"} element={<Contact />}/> */}
 				{/* <Route path={"/scoutCode"} element={<ScoutCode />}/> */}
+                <Route path="*" element={<ElsePage />} />
 			</Routes>
             <Footer />
 		</AnimatePresence>

@@ -124,7 +124,7 @@ function NavHub() {
 		togglePos();
 		wrapperEle.scrollTo(0, 0);
 	}
-    
+
 	return (
 		<>
 			<motion.button
@@ -226,7 +226,7 @@ function NavHub() {
 							</motion.div>
 						</li>
 					</motion.ul>
-					<motion.ul
+					{/* <motion.ul
 						variants={navList}
 						animate={toggleNavView ? "opening" : "closing"}
 						transition={{ ease: EASE, duration: DURATION, delay: (DURATION - DELAY) * 2 }}
@@ -243,7 +243,7 @@ function NavHub() {
 								</motion.div>
 							</Link>
 						</li>
-					</motion.ul>
+					</motion.ul> */}
 					<motion.ul
 						variants={navList}
 						animate={toggleNavView ? "opening" : "closing"}

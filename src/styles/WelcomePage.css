@@ -96,10 +96,12 @@
 #mineola {
 	animation-name: comeUp;
 	margin-top: 200px;
+    height: min-content;
 }
 #robotics {
 	animation-name: comeDown;
 	margin-top: -200px;
+    height: min-content;
 }
 #mineola_container,
 #robotics_container {
@@ -220,6 +222,7 @@
 	#robotics {
 		font-size: 15vw;
 		margin: 0;
+        
 
 		animation-duration: 3s;
 		animation-fill-mode: forwards;
@@ -233,6 +236,6 @@
 		height: 100%;
 		overflow-y: hidden;
 		width: auto;
-		height: 16vw;
-	}
+		height: 19vw;
+    }
 }

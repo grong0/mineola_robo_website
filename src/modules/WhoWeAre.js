@@ -6,7 +6,7 @@ function WhoWeAre() {
 		<div className="content" id="whoweare">
 			<div className="titleElement">
 				<div>Who We Are</div> {/* or: Who are we? */}
-				<div></div>
+				<div>A little about us</div>
 			</div>
 
 			<div id="slideshow-container">

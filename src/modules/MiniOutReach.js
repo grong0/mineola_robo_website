@@ -19,7 +19,7 @@ function MiniOutReach() {
 					<Link id="inline-outreach-link" to="/outreach" onTap={scrollUp}>
 						<em>here</em>
 					</Link>{" "}
-					to learn more...
+					to learn more
 				</div>
 			</div>
 

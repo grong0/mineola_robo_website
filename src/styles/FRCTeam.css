@@ -1,0 +1,94 @@
+#theteam {
+	width: 1000px;
+}
+
+#whosOnTheTeam {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 100%;
+}
+
+#mentors {
+	grid-column-start: 1;
+	grid-column-end: 2;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#mentor {
+	width: 100%;
+	margin-bottom: auto;
+}
+#mentor:last-of-type {
+	margin-bottom: 0;
+}
+
+#mentor_picture {
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+
+#mentor_picture img {
+	width: auto;
+	height: 100%;
+}
+
+#mentor_name {
+	font-size: 2em;
+	line-height: 2em;
+}
+
+#students {
+	grid-column-start: 2;
+	grid-column-end: 3;
+
+	width: auto;
+	font-size: 0.67em;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#align_students {
+	width: max-content;
+	margin-left: auto;
+}
+
+#student {
+	width: 370px;
+}
+#student span:last-of-type {
+	float: right;
+}
+
+#our-mentors {
+	display: flex;
+	justify-content: center;
+}
+
+#mentorContainer {
+	width: 100%;
+}
+#mentorImg {
+	width: 100%;
+}
+#mentorImg img {
+	width: 100%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+#mentorName {
+	width: 100%;
+	font-size: 2em;
+	font-family: "Poppins";
+	color: black;
+}
